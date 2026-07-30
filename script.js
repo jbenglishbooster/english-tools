@@ -1,5 +1,6 @@
+
 const words = [
-  "Ability - Skill to do something",
+"Ability - Skill to do something",
 "Accept - To receive",
 "Accident - Unexpected event",
 "Achieve - To succeed",
@@ -23,31 +24,15 @@ const words = [
 "Basic - Simple and important",
 "Believe - To think something is true",
 "Benefit - Something helpful",
-"Bright - Full of light",
-"Ability - Skill to do something",
-"Accept - To receive",
-"Achieve - To succeed",
-"Adventure - Exciting experience",
-"Beautiful - Very pretty",
-"Brave - Courageous",
-"Careful - Taking care",
-"Challenge - Difficult task",
-"Confidence - Belief in yourself",
-"Creative - Full of new ideas",
-"Decision - Choice",
-"Education - Learning process",
-"Energy - Strength and power",
-"Friendly - Kind and nice",
-"Happy - Feeling joy",
-"Honest - Truthful",
-"Knowledge - Information",
-"Practice - Repeated learning",
-"Success - Achievement of goals",
-"Wisdom - Good judgment"
+"Bright - Full of light"
 ];
 
-document.querySelector("button").addEventListener("click", function () {
+function showWord() {
   const random = words[Math.floor(Math.random() * words.length)];
   document.getElementById("result").innerHTML =
     "<h3>Today's Word</h3><p>" + random + "</p>";
-});
+}
+
+showWord();
+
+document.getElementById("nextWord").addEventListener("click", showWord);
