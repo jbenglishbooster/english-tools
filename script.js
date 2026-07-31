@@ -39,7 +39,7 @@ document.getElementById("nextWord").addEventListener("click", showWord);
 document.getElementById("searchBtn").addEventListener("click", function () {
   const input = document.getElementById("searchInput").value.toLowerCase();
 
-  const found = words.find(word => word.toLowerCase().startsWith(input + " -"));
+  const found = words.find(word => word.toLowerCase().includes(input));
 
   if (found) {
     document.getElementById("result").innerHTML =
