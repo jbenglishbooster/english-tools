@@ -36,3 +36,16 @@ function showWord() {
 showWord();
 
 document.getElementById("nextWord").addEventListener("click", showWord);
+document.getElementById("searchBtn").addEventListener("click", function () {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+
+  const found = words.find(word => word.toLowerCase().startsWith(input + " -"));
+
+  if (found) {
+    document.getElementById("result").innerHTML =
+      "<h3>Search Result</h3><p>" + found + "</p>";
+  } else {
+    document.getElementById("result").innerHTML =
+      "<h3>Word not found!</h3>";
+  }
+});
