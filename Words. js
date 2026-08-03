@@ -1,1 +1,12 @@
-
+const words = [
+  "Ability - Skill to do something",
+  "Accept - To receive",
+  "Accident - Unexpected event",
+  "Achieve - To succeed",
+  "Action - Something you do",
+  "Active - Full of energy",
+  "Adventure - Exciting experience",
+  "Advice - Helpful suggestion",
+  "Afraid - Feeling fear",
+  "Agree - To have the same opinion"
+];
