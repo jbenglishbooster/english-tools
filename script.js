@@ -25,8 +25,7 @@ const words = [
 "Believe - To think something is true",
 "Benefit - Something helpful",
 "Bright - Full of light",
-];
-"Air - The mixture of gases we breathe",
+  "Air - The mixture of gases we breathe",
 "Airport - A place where airplanes land and take off",
 "Animal - A living creature",
 "Apple - A sweet fruit",
@@ -56,6 +55,9 @@ const words = [
 "Bed - Furniture for sleeping",
 "Before - Earlier than",
 "Begin - To start"
+];
+
+
 function showWord() {
   const random = words[Math.floor(Math.random() * words.length)];
   document.getElementById("result").innerHTML =
