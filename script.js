@@ -51,6 +51,7 @@ const words = [
 "Beach - Sandy land beside the sea",
 "Beautiful - Very attractive",
 "Because - For the reason that",
+  "Below - In a lower place",
 "Become - To begin to be",
 "Bed - Furniture for sleeping",
 "Before - Earlier than",
