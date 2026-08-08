@@ -69,9 +69,9 @@ showWord();
 
 document.getElementById("nextWord").addEventListener("click", showWord);
 document.getElementById("searchBtn").addEventListener("click", function () {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-
-  const found = words.find(word => word.toLowerCase().includes(input));
+  
+const input = document.getElementById("searchInput").value.trim().toLowerCase();
+  const found = words.find(word => word.split(" - ")[0].trim().toLowerCase() === input);
 
   if (found) {
     document.getElementById("result").innerHTML =
