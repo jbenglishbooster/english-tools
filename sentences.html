@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Sentence Practice</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f7fa;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    .sentence {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 25px 0;
+      line-height: 1.5;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 8px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .meaning {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #2563eb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>English Sentence Practice</h1>
+
+    <p>Learn and practice simple English sentences.</p>
+
+    <div id="sentence" class="sentence"></div>
+
+    <div id="meaning" class="meaning"></div>
+
+    <button onclick="showSentence()">Next Sentence</button>
+
+    <button onclick="showMeaning()">Show Meaning</button>
+
+    <br>
+
+    <a href="index.html">← Back to English Tools</a>
+
+  </div>
+
+  <script>
+
+    const sentences = [
+      {
+        english: "I wake up early every morning.",
+        meaning: "मैं हर सुबह जल्दी उठता हूँ।"
+      },
+      {
+        english: "I am learning English.",
+        meaning: "मैं अंग्रेजी सीख रहा हूँ।"
+      },
+      {
+        english: "Please help me.",
+        meaning: "कृपया मेरी मदद करें।"
+      },
+      {
+        english: "What are you doing?",
+        meaning: "आप क्या कर रहे हैं?"
+      },
+      {
+        english: "I don't understand.",
+        meaning: "मुझे समझ नहीं आया।"
+      },
+      {
+        english: "Can you speak slowly?",
+        meaning: "क्या आप धीरे बोल सकते हैं?"
+      },
+      {
+        english: "I am going to school.",
+        meaning: "मैं स्कूल जा रहा हूँ।"
+      },
+      {
+        english: "Where do you live?",
+        meaning: "आप कहाँ रहते हैं?"
+      },
+      {
+        english: "I like English.",
+        meaning: "मुझे अंग्रेजी पसंद है।"
+      },
+      {
+        english: "See you tomorrow.",
+        meaning: "कल मिलते हैं।"
+      }
+    ];
+
+    let currentSentence = 0;
+
+    function showSentence() {
+      currentSentence =
+        Math.floor(Math.random() * sentences.length);
+
+      document.getElementById("sentence").innerHTML =
+        sentences[currentSentence].english;
+
+      document.getElementById("meaning").innerHTML = "";
+    }
+
+    function showMeaning() {
+      document.getElementById("meaning").innerHTML =
+        "Meaning: " + sentences[currentSentence].meaning;
+    }
+
+    showSentence();
+
+  </script>
+
+</body>
+  </html>
